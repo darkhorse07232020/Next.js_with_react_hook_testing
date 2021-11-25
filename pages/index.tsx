@@ -1,9 +1,22 @@
+import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import BallotGroup from '../components/BallotGroup'
 
 const Home: NextPage = () => {
+  const [ballotGroup, setBallotGroup] = useState<IBallotGroup[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/ballots')
+      .then(res => res.json())
+      .then(data => {
+        setBallotGroup(data.items);
+      });
+  }, []);
+
+  console.log(ballotGroup);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,8 +27,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Good Luck!
+          AWARDS 2021
         </h1>
+        {ballotGroup.length > 0 && ballotGroup.map((ballot: IBallotGroup, index: number) => (
+          <BallotGroup key={ballot.id} {...ballot} />
+        ))}
       </main>
     </div>
   )

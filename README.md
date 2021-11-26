@@ -77,3 +77,18 @@ curl -X GET \
 
 > **Good luck and if you have any questions, please reach out to us!**
 
+
+## TEST-INSTRUCTIONS
+
+### Configure Environment
+  Clone this repo using `git clone`
+  After clone this repo, install packages using `npm install` or `yarn`
+
+### How to install this app
+  Run command `next dev`
+
+### How to use this app
+- Select items you want to select
+- Click submit button at the bottom right of the page
+
+  #### You will see the modal and can see the items you selected

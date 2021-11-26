@@ -7,12 +7,14 @@
   text-align: center;
   background-color: transparent;
 }
-.wrapper.active {
-  background-color: #009B86;
+
+.wrapperSelected {
+  background-color: #009B86 !important;
 }
+
 .wrapper:hover {
-  background-color: #009B86;
-  color: #CCCCCC;
+  /* background-color: #009B86;
+  color: #CCCCCC; */
 }
 
 .title {
@@ -25,4 +27,8 @@
   margin: 10px auto;
   border-radius: 9999px;
   overflow: hidden;
+}
+
+.buttonSelected {
+  background-color: #34AC9C !important;
 }

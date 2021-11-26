@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .footer {
@@ -120,4 +121,30 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+@media (min-width: 600px) {
+  .submitButton {
+    position: absolute;
+  }
+}
+
+.submitButton {
+  background-color: rgb(139, 91, 0) !important;
+  bottom: 5rem;
+  right: 0;
+}
+
+.success {
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selectedItems {
+  font-size: x-large;
+}
+
+.itemsContainer {
+  margin-top: 20px;
 }
